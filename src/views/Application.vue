@@ -18,6 +18,10 @@ const applicationForm = ref({
     request: ''
 
 })
+
+// 신청 허용
+const isApplication = ref(false)
+
 // const isLeaderError = ref(false)
 // const isTeamNameError = ref(false)
 const isFormLoading = ref(false);
@@ -139,10 +143,10 @@ function topicChange(topic) {
                     <div style="margin-top: 10px;">성실하게 작성해주세요</div>
                 </div>
                 <Divider style="width: 80%; margin-left: auto; margin-right: auto;"></Divider>
-                <div style="text-align:center;">
+                <div style="text-align:center;" v-if="!isApplication ">
                     참가 신청이 종료되었습니다!<br>2025년 1월 7일 많은 기대와 관심 부탁드립니다!
                 </div>
-                <!-- <div style="text-align: center;">
+                <div style="text-align: center;" v-if="isApplication">
                     
                     <div class="form-body">
                         <div style="font-size: 17px; text-align: left; margin-bottom: 10px;">*팀 이름</div>
@@ -155,7 +159,7 @@ function topicChange(topic) {
                         <div style="text-align: left; font-size: 17px; margin-bottom: 10px;">*팀장 이름</div>
                         <InputText :disabled="isFormLoading" v-model="applicationForm.teamLeader"
                             placeholder="팀장 이름을 입력해주세요" style="width: 100%; color: black;" />
-                        <!-- <div style="transition: 5s; text-align: left; margin-left: 2px; margin-top: 2px; color:red;" :style="isLeaderError ? 'display:block;' : 'display:none;'">이름을 입력해주세요</div> 
+                        
                     </div>
                     <div class="form-body">
                         <div style="text-align: left; font-size: 17px; margin-bottom: 10px;">*팀장 연락처 (-로 구분없이 입력, 010포함)</div>
@@ -221,7 +225,7 @@ function topicChange(topic) {
                     <Button :loading="isFormLoading" @click="submit()" class="form-body" style="height: 40px;">
                         참가 신청하기
                     </Button>
-                </div> -->
+                </div>
             </div>
         </div>
 

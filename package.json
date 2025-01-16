@@ -1,0 +1,30 @@
+{
+  "name": "festival",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@primevue/themes": "^4.2.5",
+    "axios": "^1.7.9",
+    "body-parser": "^1.20.3",
+    "connect-history-api-fallback": "^2.0.0",
+    "google-auth-library": "^9.15.0",
+    "google-spreadsheet": "^4.1.4",
+    "primevue": "^4.2.5",
+    "vue": "^3.5.13",
+    "vue-cookies": "^1.8.5",
+    "vue-router": "^4.5.0",
+    "vue3-naver-maps": "^4.2.0"
+  },
+  "devDependencies": {
+    "@primevue/auto-import-resolver": "^4.2.5",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "unplugin-vue-components": "^0.27.5",
+    "vite": "^6.0.1"
+  }
+}
